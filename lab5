@@ -1,0 +1,6 @@
+for char in 'hello world':
+    print(char,type(char))
+a='hello world'
+b=a.replace('','')
+s = "abcd";
+subString(s,len(s));
