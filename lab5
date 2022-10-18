@@ -1,59 +1,37 @@
-1. def character_exists(char, str):
-    for char in str:
-        if char in str:
-            return True
-        else:
-            return False
- 
-2. def get_rid_of_comma(str):
-    for char in str:
-        if char == ',':
-            str = str.replace(',', '')
-    return str
- 
-3. def print_substrings(str):
-    for i in range(len(str)):
-        for j in range(i + 1, len(str) + 1):
-           print(str[i:j])
- 
-4. def is_palindrome(str):
-    str = str.lower()
-    str = str.replace(" ", "")
-    return str == str[::-1]
- 
-5. def difference_of_strings(str1, str2):
-    set1 = set(str1)
-    set2 = set(str2)
-    return "".join(set1.difference(set2))
- 
-6. def all_vowels_in_alphabetic_order(str):
-    str = str.lower()
-    str = str.replace(" ", "")
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    for i in range(len(str)):
-        if str[i] in vowels:
-            vowels.remove(str[i])
-    return len(vowels) == 0
- 
-7. def print_and_trim_string(str, k):
-    while len(str) > k:
-        print(str)
-        str = str[:-1]
-    print(str)
- 
+def character_exists(char, str):
+    for char in str:
+        if char in str:
+            return True
+        else:
+            return False
+def get_rid_of_comma(str):
+     for char in str:
+        if char == ',':
+            str = str.replace(',', '')
+        return str
+def print_substrings(str):
+     for i in range(len(str)):
+         for j in range(i + 1, len(str) + 1):
+            print(str[i:j])
+def is_palindrome(str):
+    str = str.lower()
+    str = str.replace(" ", "")
+    return str == str[::-1]
+def difference_of_strings(str1, str2):
+    set1 = set(str1)
+    set2 = set(str2)
+    return "".join(set1.difference(set2))
+def all_vowels_in_alphabetic_order(str):
+    str = str.lower()
+    str = str.replace(" ", "")
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for i in range(len(str)):
+        if str[i] in vowels:
+             vowels.remove(str[i])
+    return len(vowels) == 0
+def print_and_trim_string(str, k):
+     while len(str) > k:
+        print(str)
+        str = str[:-1]
+     print(str)
 print_and_trim_string('Greetings', 3)
-
-Explanation:
-1. The character_exists function takes in a character and a string as input and returns True if the character exists in the string and False if it does not.
- 
-2. The get_rid_of_comma function takes in a string as input and removes all the commas present in it.
- 
-3. The print_substrings function takes a string as input and prints all the substrings of the string including the empty string.
- 
-4. The is_palindrome function takes a string as input and returns True if the string is a palindrome and False if it is not. The function is case insensitive and also removes all the whitespace from the string if present.
- 
-5. The difference_of_strings function takes two strings as input and returns the difference of the two strings as a string. The function is case insensitive and removes all the duplicates from the output string.
- 
-6. The all_vowels_in_alphabetic_order function takes a string as input and returns True if all the vowels in the string are in alphabetical order and False if they are not. The function is case insensitive and also removes all the whitespace from the string if present.
- 
-7. The print_and_trim_string function takes a string and an integer k as input and prints the string. The function then trims one character from the end of the string at a time and prints it again until there are k characters left.You 
